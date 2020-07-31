@@ -1,0 +1,3 @@
+C:\Users\Admin\Desktop\UnrealEngine\BuildingEscape\Intermediate\Build\Win64\UE4Editor\Development\BuildingEscape\Definitions.BuildingEscape.h
+C:\Users\Admin\Desktop\UnrealEngine\BuildingEscape\Source\BuildingEscape\WorldPosition.h
+C:\Users\Admin\Desktop\UnrealEngine\BuildingEscape\Intermediate\Build\Win64\UE4Editor\Inc\BuildingEscape\WorldPosition.generated.h

@@ -728,3 +728,116 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.07.31-21.40.19:147][733]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
 [2020.07.31-21.40.19:305][733]LogContentBrowser: Native class hierarchy populated in 0.0073 seconds. Added 3428 classes and 823 folders.
 [2020.07.31-21.40.19:305][733]Display: HotReload took  3.3s.
+[2020.07.31-21.42.44:176][778]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2020.07.31-21.48.43:953][498]LogSlate: Window 'Class Viewer' being destroyed
+[2020.07.31-21.48.43:957][498]LogSlate: Window 'Class Viewer' being destroyed
+[2020.07.31-21.49.11:319][199]Cmd: DELETE
+[2020.07.31-21.49.11:319][199]Cmd: ACTOR DELETE
+[2020.07.31-21.49.11:380][199]LogEditorActor: Deleted Actor: Actor
+[2020.07.31-21.49.11:389][199]LogUObjectHash: Compacting FUObjectHashTables data took   0.57ms
+[2020.07.31-21.49.11:390][199]LogEditorActor: Deleted 1 Actors (0.049 secs)
+[2020.07.31-21.49.17:084][847]Cmd: DELETE
+[2020.07.31-21.49.17:084][847]Cmd: ACTOR DELETE
+[2020.07.31-21.49.17:085][847]LogEditorActor: Deleted Actor: TriggerSphere
+[2020.07.31-21.49.17:091][847]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
+[2020.07.31-21.49.17:093][847]LogEditorActor: Deleted 1 Actors (0.009 secs)
+[2020.07.31-21.49.18:235][974]LogActorFactory: Actor Factory created Sphere
+[2020.07.31-21.49.19:084][ 59]LogActorFactory: Actor Factory created Sphere
+[2020.07.31-21.49.29:801][ 93]Cmd: TRANSACTION UNDO
+[2020.07.31-21.49.29:801][ 93]LogEditorTransaction: Undo Move Actors
+[2020.07.31-21.49.31:112][200]Cmd: TRANSACTION UNDO
+[2020.07.31-21.49.31:112][200]LogEditorTransaction: Undo Create Actors
+[2020.07.31-21.49.32:307][339]Cmd: TRANSACTION REDO
+[2020.07.31-21.49.32:307][339]LogEditorTransaction: Redo Create Actors
+[2020.07.31-21.49.59:387][165]LogSlate: WidgetSwitcher ('None') active index changed to -1
+[2020.07.31-21.49.59:388][165]LogSlate: WidgetSwitcher ('None') active index changed to 0
+[2020.07.31-21.49.59:598][165]LogSlate: Took 0.000159 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2020.07.31-21.50.11:961][165]LogSlate: WidgetSwitcher ('None') active index changed to 1
+[2020.07.31-21.50.35:428][165]Candidate modules for hot reload:
+[2020.07.31-21.50.35:428][165]  BuildingEscape
+[2020.07.31-21.50.35:428][165]Launching UnrealBuildTool... [D:/Epic Games/Epic Games/UE_4.25/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=BuildingEscape,6273 BuildingEscapeEditor Win64 Development -Project="C:/Users/Admin/Desktop/UnrealEngine/BuildingEscape/BuildingEscape.uproject" "C:/Users/Admin/Desktop/UnrealEngine/BuildingEscape/BuildingEscape.uproject"  -IgnoreJunk]
+[2020.07.31-21.50.44:032][165]CompilerResultsLog: New page: Compilation - Aug 1, 2020, 11:50:44 AM
+[2020.07.31-21.50.44:032][165]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Admin\Desktop\UnrealEngine).
+[2020.07.31-21.50.44:032][165]CompilerResultsLog: Creating makefile for BuildingEscapeEditor (.uproject file is newer)
+[2020.07.31-21.50.44:032][165]CompilerResultsLog: Parsing headers for BuildingEscapeEditor
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Admin\Desktop\UnrealEngine\BuildingEscape\BuildingEscape.uproject" "C:\Users\Admin\Desktop\UnrealEngine\BuildingEscape\Intermediate\Build\Win64\BuildingEscapeEditor\Development\BuildingEscapeEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Admin\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2020.07.31-21.50.44:032][165]CompilerResultsLog: Reflection code generated for BuildingEscapeEditor in 4.8799595 seconds
+[2020.07.31-21.50.44:032][165]CompilerResultsLog: Building BuildingEscapeEditor...
+[2020.07.31-21.50.44:032][165]CompilerResultsLog: Using Visual Studio 2019 14.26.28806 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2020.07.31-21.50.44:032][165]CompilerResultsLog: Building 9 actions with 8 processes...
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:   [1/9] BuildingEscapeGameModeBase.cpp
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:   [2/9] WorldPosition.cpp
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:   [3/9] BuildingEscape.cpp
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:   [4/9] BuildingEscape.init.gen.cpp
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:   [5/9] WorldPosition.gen.cpp
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:   [6/9] BuildingEscapeGameModeBase.gen.cpp
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:   [7/9] UE4Editor-BuildingEscape-6273.lib
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:      Creating library C:\Users\Admin\Desktop\UnrealEngine\BuildingEscape\Intermediate\Build\Win64\UE4Editor\Development\BuildingEscape\UE4Editor-BuildingEscape-6273.lib and object C:\Users\Admin\Desktop\UnrealEngine\BuildingEscape\Intermediate\Build\Win64\UE4Editor\Development\BuildingEscape\UE4Editor-BuildingEscape-6273.exp
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:   [8/9] UE4Editor-BuildingEscape-6273.dll
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:      Creating library C:\Users\Admin\Desktop\UnrealEngine\BuildingEscape\Intermediate\Build\Win64\UE4Editor\Development\BuildingEscape\UE4Editor-BuildingEscape-6273.suppressed.lib and object C:\Users\Admin\Desktop\UnrealEngine\BuildingEscape\Intermediate\Build\Win64\UE4Editor\Development\BuildingEscape\UE4Editor-BuildingEscape-6273.suppressed.exp
+[2020.07.31-21.50.44:032][165]CompilerResultsLog:   [9/9] BuildingEscapeEditor.target
+[2020.07.31-21.50.44:032][165]CompilerResultsLog: Total time in Parallel executor: 1.85 seconds
+[2020.07.31-21.50.44:033][165]CompilerResultsLog: Total execution time: 8.52 seconds
+[2020.07.31-21.50.44:033][165]LogMainFrame: MainFrame: Module compiling took 8.608 seconds
+[2020.07.31-21.50.44:047][165]LogClass: Could not find existing class WorldPosition in package /Script/BuildingEscape for HotReload, assuming new class
+[2020.07.31-21.50.44:049][165]LogContentBrowser: Native class hierarchy updated for 'BuildingEscape' in 0.0005 seconds. Added 2 classes and 2 folders.
+[2020.07.31-21.50.44:051][165]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2020.07.31-21.50.44:091][165]LogContentBrowser: Native class hierarchy populated in 0.0110 seconds. Added 3429 classes and 823 folders.
+[2020.07.31-21.50.44:091][165]Display: HotReload took  8.7s.
+[2020.07.31-21.50.44:091][165]Warning: HotReload operation took  8.7s.
+[2020.07.31-21.50.44:152][165]LogSlate: Window 'Add C++ Component' being destroyed
+[2020.07.31-21.50.44:182][165]LogHotReload: New module detected: UE4Editor-BuildingEscape-6273.dll
+[2020.07.31-21.50.44:224][165]LogSlate: Took 0.000092 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2020.07.31-21.50.44:270][166]LogHotReload: Starting Hot-Reload from IDE
+[2020.07.31-21.50.44:394][166]LogContentBrowser: Native class hierarchy updated for 'BuildingEscape' in 0.0006 seconds. Added 2 classes and 2 folders.
+[2020.07.31-21.50.44:396][166]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2020.07.31-21.50.44:414][166]LogContentBrowser: Native class hierarchy populated in 0.0104 seconds. Added 3429 classes and 823 folders.
+[2020.07.31-21.50.44:418][166]Display: HotReload took  0.1s.
+[2020.07.31-21.51.59:589][985]LogSlate: Window 'Project Settings' being destroyed
+[2020.07.31-21.51.59:593][985]LogSlate: Window 'Project Settings' being destroyed
+[2020.07.31-21.52.11:137][618]LogSlate: Window 'Project Settings' being destroyed
+[2020.07.31-21.52.11:140][618]LogSlate: Window 'Project Settings' being destroyed
+[2020.07.31-21.54.39:622][595]LogActorFactory: Actor Factory created Cube
+[2020.07.31-21.54.40:485][698]LogActorFactory: Actor Factory created Cube
+[2020.07.31-21.54.44:630][185]LogSlate: Took 0.000128 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2020.07.31-21.54.48:241][593]LogSlate: WidgetSwitcher ('None') active index changed to -1
+[2020.07.31-21.54.48:241][593]LogSlate: WidgetSwitcher ('None') active index changed to 0
+[2020.07.31-21.54.50:597][593]LogSlate: WidgetSwitcher ('None') active index changed to 1
+[2020.07.31-21.55.05:922][593]LogSlate: Window 'Add C++ Component' being destroyed
+[2020.07.31-21.55.05:926][593]LogUObjectGlobals: Warning: Failed to find object 'Class None.'
+[2020.07.31-21.58.27:964][285]LogSlate: Window 'Save Level As' being destroyed
+[2020.07.31-21.58.27:982][285]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/BuildingEscape" FILE="C:/Users/Admin/Desktop/UnrealEngine/BuildingEscape/Content/BuildingEscape.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2020.07.31-21.58.28:004][285]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2020.07.31-21.58.28:062][285]LogSavePackage: Moving 'C:/Users/Admin/Desktop/UnrealEngine/BuildingEscape/Saved/BuildingEscape97A6B5CB411709647AC3C4981BAF6442.tmp' to 'C:/Users/Admin/Desktop/UnrealEngine/BuildingEscape/Content/BuildingEscape.umap'
+[2020.07.31-21.58.28:179][285]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/BuildingEscape_BuiltData" FILE="C:/Users/Admin/Desktop/UnrealEngine/BuildingEscape/Content/BuildingEscape_BuiltData.uasset" SILENT=true
+[2020.07.31-21.58.28:211][285]LogSavePackage: Moving 'C:/Users/Admin/Desktop/UnrealEngine/BuildingEscape/Saved/BuildingEscape_BuiltDataF09E1D16408A1B533CE0D9AC52DB5E4C.tmp' to 'C:/Users/Admin/Desktop/UnrealEngine/BuildingEscape/Content/BuildingEscape_BuiltData.uasset'
+[2020.07.31-21.58.28:215][285]LogFileHelpers: Saving map 'BuildingEscape' took 0.246
+[2020.07.31-21.58.28:220][285]AssetCheck: New page: Asset Save: multiple assets
+[2020.07.31-21.58.28:220][285]LogContentValidation: Display: Validating World /Game/BuildingEscape.BuildingEscape
+[2020.07.31-21.58.28:220][285]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/BuildingEscape_BuiltData.BuildingEscape_BuiltData
+[2020.07.31-21.58.29:614][443]LogAssetEditorSubsystem: Opening Asset editor for World /Game/BuildingEscape.BuildingEscape
+[2020.07.31-21.58.29:639][443]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2020.07.31-21.58.29:641][443]Cmd: MAP LOAD FILE="C:/Users/Admin/Desktop/UnrealEngine/BuildingEscape/Content/BuildingEscape.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2020.07.31-21.58.29:641][443]LightingResults: New page: Lighting Build
+[2020.07.31-21.58.29:641][443]LoadErrors: New page: Loading map: BuildingEscape.umap
+[2020.07.31-21.58.29:682][443]LogWorld: UWorld::CleanupWorld for BuildingEscape, bSessionEnded=true, bCleanupResources=true
+[2020.07.31-21.58.29:682][443]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.07.31-21.58.29:682][443]MapCheck: New page: Map Check
+[2020.07.31-21.58.29:682][443]LightingResults: New page: Lighting Build
+[2020.07.31-21.58.29:689][443]LogAISub: UAISubsystem::~UAISubsystem EnvQueryManager (000001F7E74AFE00), frame # 24443
+[2020.07.31-21.58.29:689][443]LogAISub: UAISubsystem::~UAISubsystem AIPerceptionSystem (000001F7E7589300), frame # 24443
+[2020.07.31-21.58.29:690][443]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2020.07.31-21.58.29:696][443]LogAIModule: Creating AISystem for world BuildingEscape
+[2020.07.31-21.58.29:697][443]LogAISub: UAISubsystem::UAISubsystem EnvQueryManager (000001F7F480E000), frame # 24443
+[2020.07.31-21.58.29:697][443]LogAISub: UAISubsystem::UAISubsystem AIPerceptionSystem (000001F790E2F240), frame # 24443
+[2020.07.31-21.58.29:698][443]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2020.07.31-21.58.29:706][443]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2020.07.31-21.58.29:712][443]Cmd: MAP CHECKDEP NOCLEARLOG
+[2020.07.31-21.58.29:712][443]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.086ms to complete.
+[2020.07.31-21.58.29:712][443]LogFileHelpers: Loading map 'BuildingEscape' took 0.071
+[2020.07.31-21.58.37:645][744]Running D:/Epic Games/Epic Games/UE_4.25/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="C:/Users/Admin/Desktop/UnrealEngine/BuildingEscape/BuildingEscape.uproject" -game -rocket -progress
+[2020.07.31-21.58.37:954][744]Discovering modules, targets and source code for project...
+[2020.07.31-21.58.38:961][744]Binding IntelliSense data...
+[2020.07.31-21.58.40:576][744]Binding IntelliSense data... 100%
+[2020.07.31-21.58.40:576][744]Writing project files...
+[2020.07.31-21.58.40:576][744]Writing project files... 100%
