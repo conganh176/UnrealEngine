@@ -7,16 +7,17 @@
 #include "BullCowCartridge.generated.h"
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
-class BULLCOWGAME_API UBullCowCartridge : public UCartridge
-{
+class BULLCOWGAME_API UBullCowCartridge : public UCartridge {
 	GENERATED_BODY()
 
 	public:
 	virtual void BeginPlay() override;
-	virtual void OnInput(const FString& Input) override;
+	virtual void OnInput(const FString& PlayerInput) override;
 	void SetupGame();
 	void GameOver();
-	void ProcessGuess(FString Guess);
+	void ProcessGuess(const FString& Guess);
+	bool IsIsogram(const FString& Word) const;
+	TArray<FString> GetValidWords(const TArray<FString>& HiddenWords) const;
 
 	// Your declarations go below!
 	private:

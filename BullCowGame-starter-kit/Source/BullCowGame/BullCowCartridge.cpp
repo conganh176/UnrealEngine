@@ -1,5 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 #include "BullCowCartridge.h"
+#include "HiddenWordList.h"
+//#include "Math/UnrealMathUtility.h"
 
 void UBullCowCartridge::BeginPlay() {         // When the game starts
     Super::BeginPlay();
@@ -7,21 +9,22 @@ void UBullCowCartridge::BeginPlay() {         // When the game starts
     //Set up game
     SetupGame();
 
+    //PrintLine(TEXT("Numbers of possible words is %i"), GetValidWords(HiddenWords).Num());
     PrintLine(TEXT("The hidden word is: %s. \nHas %i characters long"), *HiddenWord, HiddenWord.Len());
 }
 
-void UBullCowCartridge::OnInput(const FString& Input) {      // When the player hits enter
+void UBullCowCartridge::OnInput(const FString& PlayerInput) {      // When the player hits enter
     if (bGameOver) {
         ClearScreen();
         SetupGame();
     } else {
         //Check guess
-        ProcessGuess(Input);
+        ProcessGuess(PlayerInput);
     }
 }
 
 void UBullCowCartridge::SetupGame() {
-    HiddenWord = TEXT("shit");
+    HiddenWord = GetValidWords(HiddenWords)[FMath::RandRange(0, GetValidWords(HiddenWords).Num() - 1)];
     Lives = HiddenWord.Len();
     bGameOver = false;
     
@@ -31,7 +34,7 @@ void UBullCowCartridge::SetupGame() {
     PrintLine(TEXT("You have %i live(s)."), Lives);
     PrintLine(TEXT("Type your word and press enter to continue"));
 
-
+    IsIsogram(HiddenWord);
 }
 
 void UBullCowCartridge::GameOver() {
@@ -39,16 +42,22 @@ void UBullCowCartridge::GameOver() {
     PrintLine(TEXT("Game over. Press enter to play again!"));
 }
 
-void UBullCowCartridge::ProcessGuess(FString Guess) {
+void UBullCowCartridge::ProcessGuess(const FString& Guess) {
     if (Guess == HiddenWord) {
         PrintLine(TEXT("Correct!!!"));
         GameOver();
         return;
     }
 
-    // if (!IsIsogram) {
-    //     PrintLine(TEXT("No repeating letter. Guess again!"));
-    // }
+    if (Guess.Len() != HiddenWord.Len()) {
+        PrintLine(TEXT("The hidden word is %i letters long"), HiddenWord.Len());
+        return;
+    }
+
+    if (!IsIsogram(Guess)) {
+        PrintLine(TEXT("No repeating letter. Guess again!"));
+        return;
+    }
 
     --Lives;
     PrintLine(TEXT("Incorrect!!! Lost a live"));
@@ -61,11 +70,28 @@ void UBullCowCartridge::ProcessGuess(FString Guess) {
         return;
     }
 
-    if (Guess.Len() != HiddenWord.Len()) {
-        PrintLine(TEXT("Try again. You got %i live(s)."), Lives);
-        PrintLine(TEXT("The hidden word is %i letters long"), HiddenWord.Len());
-        return;
+    PrintLine(TEXT("Guess again, you have %i live(s)."), Lives);
+}
+
+bool UBullCowCartridge::IsIsogram(const FString& Word) const {
+    for (int32 Index = 0; Index < Word.Len(); Index++) {
+        for (int32 Comparision = Index + 1; Comparision < Word.Len(); Comparision++) {
+            if (Word[Index] == Word[Comparision]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+TArray<FString> UBullCowCartridge::GetValidWords(const TArray<FString>& HiddenWords) const {
+    TArray<FString> ValidWords;
+
+    for (FString word : HiddenWords) {
+        if (word.Len() >= 3 && word.Len() <= 8 && IsIsogram(word)) {
+            ValidWords.Emplace(word);
+        }
     }
 
-    PrintLine(TEXT("Guess again, you have %i live(s)."), Lives);
+    return ValidWords;
 }
