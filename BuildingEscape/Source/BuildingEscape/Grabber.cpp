@@ -1,9 +1,9 @@
 // Copyright SworldsGame 2020
 
+#include "Grabber.h"
 #include "GameFramework/PlayerController.h"
 #include "Engine/World.h"
 //#include "DrawDebugHelpers.h"
-#include "Grabber.h"
 
 #define OUT
 
@@ -48,20 +48,48 @@ void UGrabber::SetupInputComponent() {
 void UGrabber::Grab() {
 	UE_LOG(LogTemp, Warning, TEXT("Pressed"));
 
-	//Only raycase and key is pressed
-	GetFirstPhysicsBodyInReach();
+	FVector PlayerViewPointLocation;
+	FRotator PlayerViewPointRotation;
 
-	//Try to reach any actors with physics body collision channel set
+	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(OUT PlayerViewPointLocation, OUT PlayerViewPointRotation);
+
+	FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * Reach;
+
+	FHitResult HitResult = GetFirstPhysicsBodyInReach();
+	UPrimitiveComponent* ComponentToGrab = HitResult.GetComponent();
+
+	if (HitResult.GetActor()) {
+		PhysicsHandle->GrabComponentAtLocation(
+			ComponentToGrab,
+			NAME_None,
+			LineTraceEnd
+		);
+	}
 }
 
 void UGrabber::Release() {
 	UE_LOG(LogTemp, Warning, TEXT("Release"));
+
+	PhysicsHandle->ReleaseComponent();
 }
 
 // Called every frame
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	FVector PlayerViewPointLocation;
+	FRotator PlayerViewPointRotation;
+
+	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(OUT PlayerViewPointLocation, OUT PlayerViewPointRotation);
+
+	FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * Reach;
+
+	//if PhysicsHandle is attached
+	if (PhysicsHandle->GrabbedComponent) {
+		//Move the object that are holding
+		PhysicsHandle->SetTargetLocation(LineTraceEnd);
+	}
 }
 
 FHitResult UGrabber::GetFirstPhysicsBodyInReach() const {
